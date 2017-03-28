@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script2.js"></script>
+</head>
+<body>
+    <h1>Blank Page... booooooring! </h1>
+    <div class="container">
+        <div class="options-box">
+            <input type="button", id="show-listings" value="Show Listings">
+            <input type="button" id="hide-listings" value="Hide Listings">
+            <hr>
+            <span class="text">Draw a shape to search within fpr homes!</span>
+            <input type="button" id="toggle-drawing" value="Drawing Tools">
+        </div>
+        <hr>
+        <div>
+            <input type="text" id="zoom-to-area-text" placeholder="Enter your favorite area!">
+            <input type="button" id="zoom-to-area" value="Zoom">
+        </div>
+
+       <!--  Hier kommt jetzt die Eingabemaske für die Berechnung der Distanzen -->
+       <div>
+           <span class="text">Within</span>
+           <select id="max-duration">
+               <option value="10">10 min</option>
+               <option value="15">15 min</option>
+               <option value="30">30 min</option>
+               <option value="60">60 min</option>
+           </select>
+           <select id="mode">
+               <option value="DRIVING">drive</option>
+               <option value="WALKING">walk</option>
+               <option value="BICYCLING">bike</option>
+               <option value="TRANSIT">transit ride</option>
+           </select>
+           <span class="text">of</span>
+           <input type="text" id="search-within-time-text" placeholder="Ex. Google Office NYC">
+           <input type="button" id="search-within-time" value="Go">
+       </div>
+<!-- Hier legen wir die Box für die SEARCHBOX an -->
+       <hr>
+        <div>
+          <span class="text">Search for nearby places</span>
+          <input id="places-search" type="text" placeholder="Ex: Pizza delivery in NYC">
+          <input id="go-places" type="button" value="Go">
+        </div>
+    </div>
+    <div id="map"></div>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQtFEI8IB7P_dEbyhu9_PYO76Nebq8qUY&v=3&libraries=places,drawing, geometry&callback=initMap"></script>
+</body>
+</html>
